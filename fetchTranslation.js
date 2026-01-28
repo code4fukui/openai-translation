@@ -1,4 +1,4 @@
-import { fetchAPI } from "https://code4fukui.github.io/ai_chat/openai.js";
+import { fetchAPI } from "./fetchAPI.js";
 
 //const defmodel = "text-moderation-latest";
 const defmodel = "gpt-5.2";
@@ -10,5 +10,6 @@ export const fetchTranslation = async (text, tolang = "en", model = defmodel) =>
     model,
     input,
   });
+  if (res.error) throw new Error(res.error);
   return res.output[0]?.content[0]?.text;
 };

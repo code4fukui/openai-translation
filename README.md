@@ -4,10 +4,10 @@
 
 set a file ".env"
 ```sh
-OPENAI_API_KEY=???
+OPENAI_APIKEY=???
 ```
 
-in JavaScript/Deno
+in JavaScript/Deno with --env
 ```js
 import { fetchTranslation } from "https://code4fukui.github.io/openai-translation/fetchTranslation.js";
 
