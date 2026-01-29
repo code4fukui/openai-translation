@@ -10,6 +10,8 @@ export const fetchTranslation = async (text, tolang = "en", model = defmodel) =>
     model,
     input,
   });
-  if (res.error) throw new Error(res.error);
+  if (res.error) {
+    throw new Error(res.error.message);
+  };
   return res.output[0]?.content[0]?.text;
 };
